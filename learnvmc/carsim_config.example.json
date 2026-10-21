@@ -1,0 +1,62 @@
+{
+  "database_dir": "REPLACE_WITH_CARSIM_PROJECT_DIRECTORY",
+  "pycarsimlib_path": "REPLACE_WITH_LOCAL_PYCARSIMLIB_DIRECTORY",
+  "torque_imports": [
+    "IMP_MY_OUT_D1_L",
+    "IMP_MY_OUT_D1_R",
+    "IMP_MY_OUT_D2_L",
+    "IMP_MY_OUT_D2_R"
+  ],
+  "steering_import": "IMP_STEER_SW",
+  "steering_scale": 1203.2113697747288,
+  "signals": {
+    "vx": [
+      "Vx",
+      0.2777777777777778
+    ],
+    "vy": [
+      "Vy",
+      0.2777777777777778
+    ],
+    "yaw_rate": [
+      "AVz",
+      0.017453292519943295
+    ],
+    "roll": [
+      "Roll",
+      0.017453292519943295
+    ],
+    "roll_rate": [
+      "AVx",
+      0.017453292519943295
+    ],
+    "X": [
+      "Xo",
+      1.0
+    ],
+    "Y": [
+      "Yo",
+      1.0
+    ],
+    "yaw": [
+      "Yaw",
+      0.017453292519943295
+    ],
+    "fz_fl": [
+      "Fz_L1",
+      1.0
+    ],
+    "fz_fr": [
+      "Fz_R1",
+      1.0
+    ],
+    "fz_rl": [
+      "Fz_L2",
+      1.0
+    ],
+    "fz_rr": [
+      "Fz_R2",
+      1.0
+    ]
+  }
+}
