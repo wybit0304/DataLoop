@@ -192,7 +192,7 @@ def main():
     torch.manual_seed(args.seed)
     args.out.mkdir(parents=True,exist_ok=True)
     if args.checkpoint is None:
-        args.checkpoint = args.out/'td3.pt' if (args.out/'td3.pt').exists() else HERE/'examples/td3_actor.pt'
+        args.checkpoint = args.out/'td3.pt'
     if args.mode == 'deploy':
         deploy(args)
         return
@@ -201,6 +201,8 @@ def main():
         train(args,agent)
         evaluate(args,agent)
         return
+    if not args.checkpoint.is_file():
+        parser.error('No trained checkpoint found. Run train first with the same --out, or supply --checkpoint.')
     metadata = agent.load(args.checkpoint)
     if metadata.get('env_config',ENV_CONFIG) != ENV_CONFIG:
         raise ValueError('Environment configuration differs from the checkpoint')
